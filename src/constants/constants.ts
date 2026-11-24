@@ -1,0 +1,47 @@
+export type ProductsType = {
+  id: number;
+  product_name: string;
+  price: number;
+  category: string;
+  rating: number;
+  icon?: string;
+};
+
+export const PRODUCTS: ProductsType[] = [
+  {
+    id: 1,
+    product_name: 'Wireless Headphones',
+    price: 99.99,
+    category: 'Audio',
+    rating: 4.8,
+    icon: '🎧',
+  },
+  {
+    id: 2,
+    product_name: 'Smart Watch',
+    price: 199.99,
+    category: 'Wearables',
+    rating: 4.6,
+    icon: '⌚',
+  },
+  {
+    id: 3,
+    product_name: 'Laptop Stand',
+    price: 49.99,
+    category: 'Accessories',
+    rating: 4.9,
+    icon: '💻',
+  },
+  {
+    id: 4,
+    product_name: 'USB-C Cable',
+    price: 19.99,
+    category: 'Cables',
+    rating: 4.7,
+    icon: '🔌',
+  },
+];
+
+export type CartItem = ProductsType & {
+  quantity: number;
+};
